@@ -4,17 +4,26 @@
 #include <math.h>
 #include <stddef.h>
 #include <float.h>
-
-enum constants{INF = 2147483647 , ERCODE = -1};
+#include <stdbool.h>
+enum constants { INF = 2147483647, ERCODE = -1 };
 
 /**
- * Gives a root of x
- * @param x - discriminant
- * @return root of x
+ * Check the number for equation to zero
+ * @param [in] num - a double number
+ * @return 1 if number equates zero or 0 otherwise
  */
-double sqrt_d(double x) {
-    assert(x > 0 || fabs(x) < DBL_EPSILON);
-    return sqrt(x);
+bool is_zero(double num) {
+    return fabs(num) < DBL_EPSILON;
+}
+
+/**
+ * Gives a root of D
+ * @param [in] D - discriminant
+ * @return root of D
+ */
+double sqrt_d(double D) {
+    assert(D > 0 || fabs(D) < DBL_EPSILON);
+    return sqrt(D);
 }
 
 /**
@@ -29,16 +38,16 @@ double sqrt_d(double x) {
  * @return - Number of roots or ErrorCode (-1)
  */
 
-int SquareEquationSolver(double a, double b, double c, double* x1, double* x2) {
+int SquareEquationSolver(const double a,const double b,const double c, double* x1, double* x2) {
     assert(x1 != x2);
     assert(x1 != NULL);
     assert(x2 != NULL);
 
-    if (fabs(a) < DBL_EPSILON) {
-        if (fabs(b) < DBL_EPSILON) {
+    if (is_zero(a)) {
+        if (is_zero(b)) {
             *x1 = NAN;
             *x2 = NAN;
-            if (fabs(c) < DBL_EPSILON) {
+            if (is_zero(c)) {
                 return INF;
             } else {
                 return ERCODE;
@@ -48,12 +57,17 @@ int SquareEquationSolver(double a, double b, double c, double* x1, double* x2) {
             return 1;
         }
     } else {
+        if (!is_zero(a) && !is_zero(b) && is_zero(c)) {
+            *x1 = 0;
+            *x2 = -b / a;
+            return 2;
+        }
         double D = b * b - 4 * a * c;
         if (D < 0) {
             *x1 = NAN;
             *x2 = NAN;
             return 0;
-        } else if (fabs(D) < DBL_EPSILON) {
+        } else if (is_zero(D)) {
             *x1 = -b / (2 * a);
             *x2 = NAN;
             return 1;
@@ -73,7 +87,7 @@ int SquareEquationSolver(double a, double b, double c, double* x1, double* x2) {
  * @param [in] x1 - first possible root
  * @param [in] x2 - second possible root
  *
- * @return Answer for square equation
+ * @note prints answer for square equation
  */
 void SquareEqAns(int status, double x1, double x2) {
     if (status != INF) {
@@ -86,9 +100,9 @@ void SquareEqAns(int status, double x1, double x2) {
             break;
         case 2 : printf("two roots : %lf and %lf\n", x1, x2);
             break;
-        case ERCODE : printf("ERROR : This equation can not be solved\n");
+        case INF : printf("Infinite number of roots\n");
             break;
-        default: printf("Infinite number of roots\n");
+        default: printf("ERROR : This equation can not be solved\n");
     }
 }
 

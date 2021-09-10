@@ -2,14 +2,14 @@
 #include "library.h"
 #include <assert.h>
 
-enum constants{INF = 2147483647 , ERCODE = -1};
+enum constants { INF = 2147483647, ERCODE = -1 };
 
 int main() {
-    double a = 0;
-    double b = 0;
-    double c = 0;
-    double x1 = 0;
-    double x2 = 0;
+    double a = NAN;
+    double b = NAN;
+    double c = NAN;
+    double x1 = NAN;
+    double x2 = NAN;
 
     printf("This program can help you with solving a square equation\n");
     printf("Please, type three constituents of square equation :\n");
@@ -54,8 +54,11 @@ int main() {
         assert(ans == ERCODE);
     }
 
-    scanf("%lf%lf%lf", &a, &b, &c);
-
+    int num = scanf("%lf%lf%lf", &a, &b, &c);
+    while (num != 3) {
+        printf("ERROR : not enough arguments, try again\n");
+        num = scanf("%lf%lf%lf", &a, &b, &c);
+    }
     int answer = SquareEquationSolver(a, b, c, &x1, &x2);
     SquareEqAns(answer, x1, x2);
     return 0;

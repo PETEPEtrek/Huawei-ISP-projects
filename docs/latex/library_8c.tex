@@ -6,6 +6,7 @@
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$stddef.\+h$>$}\newline
 {\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,9 +19,11 @@ enum \mbox{\hyperlink{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1}{constants}} 
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{library_8c_abc77d975ca64eb40f75badd28fdd20be}{sqrt\+\_\+d}} (double x)
-\begin{DoxyCompactList}\small\item\em Gives a root of x. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{library_8c_ae25dc5aad6334e7a442884f286f999da}{Square\+Equation\+Solver}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+bool \mbox{\hyperlink{library_8c_a818c7ac4f30b3ab52a36a116ed00d0ef}{is\+\_\+zero}} (double num)
+\begin{DoxyCompactList}\small\item\em Check the number for equation to zero. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{library_8c_ac039fb2f6290e48f9f649a1cf9613fc4}{sqrt\+\_\+d}} (double D)
+\begin{DoxyCompactList}\small\item\em Gives a root of D. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{library_8c_af9418f83b9f4869454899a0b5d0eef5d}{Square\+Equation\+Solver}} (const double a, const double b, const double c, double $\ast$x1, double $\ast$x2)
 \begin{DoxyCompactList}\small\item\em Solves a square equation a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{library_8c_af71f37674a908c151083fbadb59b180a}{Square\+Eq\+Ans}} (int status, double x1, double x2)
 \begin{DoxyCompactList}\small\item\em Gives an answer depending on number of roots. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -54,23 +57,41 @@ ERCODE&\\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{library_8c_abc77d975ca64eb40f75badd28fdd20be}\label{library_8c_abc77d975ca64eb40f75badd28fdd20be}} 
-\index{library.c@{library.c}!sqrt\_d@{sqrt\_d}}
-\index{sqrt\_d@{sqrt\_d}!library.c@{library.c}}
-\doxysubsubsection{\texorpdfstring{sqrt\_d()}{sqrt\_d()}}
-{\footnotesize\ttfamily double sqrt\+\_\+d (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{library_8c_a818c7ac4f30b3ab52a36a116ed00d0ef}\label{library_8c_a818c7ac4f30b3ab52a36a116ed00d0ef}} 
+\index{library.c@{library.c}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{num }\end{DoxyParamCaption})}
 
 
 
-Gives a root of x. 
+Check the number for equation to zero. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em x} & -\/ discriminant \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num} & -\/ a double number \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-root of x 
+1 if number equates zero or 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{library_8c_ac039fb2f6290e48f9f649a1cf9613fc4}\label{library_8c_ac039fb2f6290e48f9f649a1cf9613fc4}} 
+\index{library.c@{library.c}!sqrt\_d@{sqrt\_d}}
+\index{sqrt\_d@{sqrt\_d}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{sqrt\_d()}{sqrt\_d()}}
+{\footnotesize\ttfamily double sqrt\+\_\+d (\begin{DoxyParamCaption}\item[{double}]{D }\end{DoxyParamCaption})}
+
+
+
+Gives a root of D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em D} & -\/ discriminant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+root of D 
 \end{DoxyReturn}
 \mbox{\Hypertarget{library_8c_af71f37674a908c151083fbadb59b180a}\label{library_8c_af71f37674a908c151083fbadb59b180a}} 
 \index{library.c@{library.c}!SquareEqAns@{SquareEqAns}}
@@ -91,14 +112,14 @@ Gives an answer depending on number of roots.
 \mbox{\texttt{ in}}  & {\em x2} & -\/ second possible root\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Answer for square equation 
-\end{DoxyReturn}
-\mbox{\Hypertarget{library_8c_ae25dc5aad6334e7a442884f286f999da}\label{library_8c_ae25dc5aad6334e7a442884f286f999da}} 
+\begin{DoxyNote}{Note}
+prints answer for square equation 
+\end{DoxyNote}
+\mbox{\Hypertarget{library_8c_af9418f83b9f4869454899a0b5d0eef5d}\label{library_8c_af9418f83b9f4869454899a0b5d0eef5d}} 
 \index{library.c@{library.c}!SquareEquationSolver@{SquareEquationSolver}}
 \index{SquareEquationSolver@{SquareEquationSolver}!library.c@{library.c}}
 \doxysubsubsection{\texorpdfstring{SquareEquationSolver()}{SquareEquationSolver()}}
-{\footnotesize\ttfamily int Square\+Equation\+Solver (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Square\+Equation\+Solver (\begin{DoxyParamCaption}\item[{const double}]{a,  }\item[{const double}]{b,  }\item[{const double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
 
 
 
