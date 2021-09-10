@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/library.c
+library.h
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/library.h
+stdio.h
+-
+assert.h
+-
+math.h
+-
+stddef.h
+-
+
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/library.h
+

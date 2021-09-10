@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/SqEq.dir/main.c.o  -o SqEq  libSqEqSo.a 

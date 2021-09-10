@@ -1,0 +1,122 @@
+\hypertarget{library_8c}{}\doxysection{library.\+c File Reference}
+\label{library_8c}\index{library.c@{library.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1}{constants}} \{ \mbox{\hyperlink{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}{INF}} = 2147483647
+, \mbox{\hyperlink{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}{ERCODE}} = -\/1
+, \mbox{\hyperlink{main_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}{INF}} = 2147483647
+, \mbox{\hyperlink{main_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}{ERCODE}} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{library_8c_abc77d975ca64eb40f75badd28fdd20be}{sqrt\+\_\+d}} (double x)
+\begin{DoxyCompactList}\small\item\em Gives a root of x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{library_8c_ae25dc5aad6334e7a442884f286f999da}{Square\+Equation\+Solver}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Solves a square equation a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{library_8c_af71f37674a908c151083fbadb59b180a}{Square\+Eq\+Ans}} (int status, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Gives an answer depending on number of roots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1}\label{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1}} 
+\index{library.c@{library.c}!constants@{constants}}
+\index{constants@{constants}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{constants}{constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1}{constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF@{INF}!library.c@{library.c}}\index{library.c@{library.c}!INF@{INF}}}\mbox{\Hypertarget{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}\label{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}} 
+INF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERCODE@{ERCODE}!library.c@{library.c}}\index{library.c@{library.c}!ERCODE@{ERCODE}}}\mbox{\Hypertarget{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}\label{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}} 
+ERCODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF@{INF}!library.c@{library.c}}\index{library.c@{library.c}!INF@{INF}}}\mbox{\Hypertarget{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}\label{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1a2e6059d72d8fde88f3127eb147e4eff8}} 
+INF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERCODE@{ERCODE}!library.c@{library.c}}\index{library.c@{library.c}!ERCODE@{ERCODE}}}\mbox{\Hypertarget{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}\label{library_8c_a28dba3bf7b4e38c36a6d8a537c14bad1af765aa3bf47586626afa1122e5e24027}} 
+ERCODE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{library_8c_abc77d975ca64eb40f75badd28fdd20be}\label{library_8c_abc77d975ca64eb40f75badd28fdd20be}} 
+\index{library.c@{library.c}!sqrt\_d@{sqrt\_d}}
+\index{sqrt\_d@{sqrt\_d}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{sqrt\_d()}{sqrt\_d()}}
+{\footnotesize\ttfamily double sqrt\+\_\+d (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Gives a root of x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ discriminant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+root of x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{library_8c_af71f37674a908c151083fbadb59b180a}\label{library_8c_af71f37674a908c151083fbadb59b180a}} 
+\index{library.c@{library.c}!SquareEqAns@{SquareEqAns}}
+\index{SquareEqAns@{SquareEqAns}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{SquareEqAns()}{SquareEqAns()}}
+{\footnotesize\ttfamily void Square\+Eq\+Ans (\begin{DoxyParamCaption}\item[{int}]{status,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Gives an answer depending on number of roots. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & -\/ Number of roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em x1} & -\/ first possible root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & -\/ second possible root\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Answer for square equation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{library_8c_ae25dc5aad6334e7a442884f286f999da}\label{library_8c_ae25dc5aad6334e7a442884f286f999da}} 
+\index{library.c@{library.c}!SquareEquationSolver@{SquareEquationSolver}}
+\index{SquareEquationSolver@{SquareEquationSolver}!library.c@{library.c}}
+\doxysubsubsection{\texorpdfstring{SquareEquationSolver()}{SquareEquationSolver()}}
+{\footnotesize\ttfamily int Square\+Equation\+Solver (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Solves a square equation a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ first coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & -\/ second coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & -\/ third coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & -\/ Pointer to the first possible root \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & -\/ Pointer to the second possible root\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Number of roots or Error\+Code (-\/1) 
+\end{DoxyReturn}
