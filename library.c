@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <float.h>
 #include <stdbool.h>
-enum constants { INF = 2147483647, ERCODE = -1 };
+enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4};
 
 /**
  * Check the number for equation to zero
@@ -54,7 +54,7 @@ int SquareEquationSolver(const double a,const double b,const double c, double* x
             }
         } else {
             *x1 = -c / b;
-            return 1;
+            return ORLEQ;
         }
     } else {
         if (!is_zero(a) && !is_zero(b) && is_zero(c)) {
@@ -90,7 +90,7 @@ int SquareEquationSolver(const double a,const double b,const double c, double* x
  * @note prints answer for square equation
  */
 void SquareEqAns(int status, double x1, double x2) {
-    if (status != INF) {
+    if (status != INF && status != ORLEQ) {
         printf("%d\n", status);
     }
     switch (status) {
@@ -99,6 +99,8 @@ void SquareEqAns(int status, double x1, double x2) {
         case 1 : printf("one root : %lf\n", x1);
             break;
         case 2 : printf("two roots : %lf and %lf\n", x1, x2);
+            break;
+        case ORLEQ : printf("This is One root linear equation and his only root : %lf\n", x1);
             break;
         case INF : printf("Infinite number of roots\n");
             break;

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/Acer/CLionProjects/SqEqSo/main.c" "/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/main.dir/main.c.o"
+  "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/main.c" "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/main.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,7 +14,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/library.dir/DependInfo.cmake"
+  "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/library.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSqEqSo.a  CMakeFiles/SqEqSo.dir/library.c.o
-/usr/bin/ranlib libSqEqSo.a
