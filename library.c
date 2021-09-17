@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <float.h>
 #include <stdbool.h>
-enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4};
+enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4, ZERO = 0, ONE = 1, TWO = 2};
 
 /**
  * Check the number for equation to zero
@@ -60,22 +60,22 @@ int SquareEquationSolver(const double a,const double b,const double c, double* x
         if (!is_zero(a) && !is_zero(b) && is_zero(c)) {
             *x1 = 0;
             *x2 = -b / a;
-            return 2;
+            return TWO;
         }
         double D = b * b - 4 * a * c;
         if (D < 0) {
             *x1 = NAN;
             *x2 = NAN;
-            return 0;
+            return ZERO;
         } else if (is_zero(D)) {
             *x1 = -b / (2 * a);
             *x2 = NAN;
-            return 1;
+            return ONE;
         } else {
             double sqrtd = sqrt_d(D);
             *x1 = (-b + sqrtd) / (2 * a);
             *x2 = (-b - sqrtd) / (2 * a);
-            return 2;
+            return TWO;
         }
     }
 }
@@ -94,11 +94,11 @@ void SquareEqAns(int status, double x1, double x2) {
         printf("%d\n", status);
     }
     switch (status) {
-        case 0 : printf("zero roots\n");
+        case ZERO : printf("zero roots\n");
             break;
-        case 1 : printf("one root : %lf\n", x1);
+        case ONE : printf("one root : %lf\n", x1);
             break;
-        case 2 : printf("two roots : %lf and %lf\n", x1, x2);
+        case TWO : printf("two roots : %lf and %lf\n", x1, x2);
             break;
         case ORLEQ : printf("This is One root linear equation and his only root : %lf\n", x1);
             break;

@@ -2,7 +2,7 @@
 #include "library.h"
 #include <assert.h>
 
-enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4};
+enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4, ZERO = 0, ONE = 1, TWO = 2};
 
 int main() {
     double a = NAN;
