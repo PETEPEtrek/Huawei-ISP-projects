@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/library.dir/Unittest.c.o"
   "CMakeFiles/library.dir/library.c.o"
   "liblibrary.a"
   "liblibrary.pdb"

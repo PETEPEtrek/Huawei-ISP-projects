@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/library.c" "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/library.dir/library.c.o"
+  "/mnt/c/Users/Acer/CLionProjects/SqEqSo/Unittest.c" "/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/library.dir/Unittest.c.o"
+  "/mnt/c/Users/Acer/CLionProjects/SqEqSo/library.c" "/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/library.dir/library.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

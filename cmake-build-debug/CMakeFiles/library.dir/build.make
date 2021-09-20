@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects
+CMAKE_SOURCE_DIR = /mnt/c/Users/Acer/CLionProjects/SqEqSo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/library.dir/depend.make
@@ -59,28 +59,43 @@ include CMakeFiles/library.dir/flags.make
 
 CMakeFiles/library.dir/library.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/library.c.o: ../library.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/library.dir/library.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/library.dir/library.c.o   -c /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/library.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/library.dir/library.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/library.dir/library.c.o   -c /mnt/c/Users/Acer/CLionProjects/SqEqSo/library.c
 
 CMakeFiles/library.dir/library.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/library.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/library.c > CMakeFiles/library.dir/library.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Acer/CLionProjects/SqEqSo/library.c > CMakeFiles/library.dir/library.c.i
 
 CMakeFiles/library.dir/library.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/library.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/library.c -o CMakeFiles/library.dir/library.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Acer/CLionProjects/SqEqSo/library.c -o CMakeFiles/library.dir/library.c.s
+
+CMakeFiles/library.dir/Unittest.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/Unittest.c.o: ../Unittest.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/library.dir/Unittest.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/library.dir/Unittest.c.o   -c /mnt/c/Users/Acer/CLionProjects/SqEqSo/Unittest.c
+
+CMakeFiles/library.dir/Unittest.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/Unittest.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Acer/CLionProjects/SqEqSo/Unittest.c > CMakeFiles/library.dir/Unittest.c.i
+
+CMakeFiles/library.dir/Unittest.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/Unittest.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Acer/CLionProjects/SqEqSo/Unittest.c -o CMakeFiles/library.dir/Unittest.c.s
 
 # Object files for target library
 library_OBJECTS = \
-"CMakeFiles/library.dir/library.c.o"
+"CMakeFiles/library.dir/library.c.o" \
+"CMakeFiles/library.dir/Unittest.c.o"
 
 # External object files for target library
 library_EXTERNAL_OBJECTS =
 
 liblibrary.a: CMakeFiles/library.dir/library.c.o
+liblibrary.a: CMakeFiles/library.dir/Unittest.c.o
 liblibrary.a: CMakeFiles/library.dir/build.make
 liblibrary.a: CMakeFiles/library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library liblibrary.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library liblibrary.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/library.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/library.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +109,6 @@ CMakeFiles/library.dir/clean:
 .PHONY : CMakeFiles/library.dir/clean
 
 CMakeFiles/library.dir/depend:
-	cd /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Acer/CLionProjects/SqEqSo /mnt/c/Users/Acer/CLionProjects/SqEqSo /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/library.dir/depend
 

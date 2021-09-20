@@ -1,0 +1,6 @@
+#ifndef SQUNITTEST_LIBRARY_H
+#define SQUNITTEST_LIBRARY_H
+
+void Unittest();
+
+#endif //SQUNITTEST_LIBRARY_H

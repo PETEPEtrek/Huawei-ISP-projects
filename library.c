@@ -5,8 +5,15 @@
 #include <stddef.h>
 #include <float.h>
 #include <stdbool.h>
-enum constants { INF = 2147483647, ERCODE = -1, ORLEQ = 4, ZERO = 0, ONE = 1, TWO = 2};
-
+enum constants {
+    INF = 2147483647,
+    ERCODE = -1,
+    ORLEQ = 4,
+    ONE = 1,
+    TWO = 2,
+    ZERO = 0
+};
+//write constant for each variant
 /**
  * Check the number for equation to zero
  * @param [in] num - a double number
@@ -22,7 +29,7 @@ bool is_zero(double num) {
  * @return root of D
  */
 double sqrt_d(double D) {
-    assert(D > 0 || fabs(D) < DBL_EPSILON);
+    assert(D > 0 || is_zero(D));
     return sqrt(D);
 }
 
@@ -38,7 +45,7 @@ double sqrt_d(double D) {
  * @return - Number of roots or ErrorCode (-1)
  */
 
-int SquareEquationSolver(const double a,const double b,const double c, double* x1, double* x2) {
+int SquareEquationSolver(const double a, const double b, const double c, double* x1, double* x2) {
     assert(x1 != x2);
     assert(x1 != NULL);
     assert(x2 != NULL);
@@ -100,7 +107,7 @@ void SquareEqAns(int status, double x1, double x2) {
             break;
         case TWO : printf("two roots : %lf and %lf\n", x1, x2);
             break;
-        case ORLEQ : printf("This is One root linear equation and his only root : %lf\n", x1);
+        case ORLEQ : printf("This is One-line linear equation and his only root : %lf\n", x1);
             break;
         case INF : printf("Infinite number of roots\n");
             break;

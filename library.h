@@ -1,5 +1,6 @@
 #ifndef SQEQLIB_LIBRARY_H
 #define SQEQLIB_LIBRARY_H
+
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects
+CMAKE_SOURCE_DIR = /mnt/c/Users/Acer/CLionProjects/SqEqSo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,6 +135,33 @@ library: cmake_check_build_system
 library/fast:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/build
 .PHONY : library/fast
+
+Unittest.o: Unittest.c.o
+
+.PHONY : Unittest.o
+
+# target to build an object file
+Unittest.c.o:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/Unittest.c.o
+.PHONY : Unittest.c.o
+
+Unittest.i: Unittest.c.i
+
+.PHONY : Unittest.i
+
+# target to preprocess a source file
+Unittest.c.i:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/Unittest.c.i
+.PHONY : Unittest.c.i
+
+Unittest.s: Unittest.c.s
+
+.PHONY : Unittest.s
+
+# target to generate assembly for a file
+Unittest.c.s:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/Unittest.c.s
+.PHONY : Unittest.c.s
 
 library.o: library.c.o
 
@@ -200,6 +227,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... library"
+	@echo "... Unittest.o"
+	@echo "... Unittest.i"
+	@echo "... Unittest.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"

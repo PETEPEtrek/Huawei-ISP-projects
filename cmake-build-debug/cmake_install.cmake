@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects
+# Install script for directory: /mnt/c/Users/Acer/CLionProjects/SqEqSo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

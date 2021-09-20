@@ -1,4 +1,4 @@
-/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/main.dir
-/mnt/d/gitH/Huawei-ISP-projects/Huawei-ISP-projects/cmake-build-debug/CMakeFiles/library.dir
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/main.dir
+/mnt/c/Users/Acer/CLionProjects/SqEqSo/cmake-build-debug/CMakeFiles/library.dir
